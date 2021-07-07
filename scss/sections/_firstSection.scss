@@ -1,5 +1,5 @@
 @import '../utilities/assets';
-
+@import '../responsive/mediasQueries/respFirstSection';
 .firstSection{
   
   display : flex;
@@ -38,6 +38,9 @@
       font-size: 18pt;
       box-sizing: border-box;
       margin-top: 35px;
+      &:hover{
+        cursor: pointer
+      }
     }
   }
 
@@ -65,4 +68,14 @@
     }
 
   }
+}
+
+@media screen and (max-width : 395px) {
+  @include phone;
+}
+@media screen and (min-width: 395px) and (max-width : 1280px) {
+  @include tablet;
+}
+@media screen and (min-width: 1280) and (max-width : 1920px) {
+  @include display;
 }

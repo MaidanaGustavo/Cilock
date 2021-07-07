@@ -1,4 +1,4 @@
-@import '../utilities/assets';
+@import '../responsive/mediasQueries/respSecondSection';
 .secondSection{
   display: flex;
   flex-direction: column;
@@ -52,7 +52,9 @@
       height: 50px;
       border: 1px solid $ciano;
       font-size: 13pt;
+      @include btn-border-drawing;
     }
+   
     }
     .card:first-child{
       h1{
@@ -66,4 +68,18 @@
       margin-right: 0;
     }
   }
+}
+
+@media screen and (max-width:395px) {
+  @include phone;
+}
+
+@media screen and(min-width:395px) and  (max-width:875px) {
+  @include tablet;
+}
+@media screen and(min-width:875px) and  (max-width:1600px) {
+  @include displayHD;
+}
+@media screen and(min-width:1600px) and  (max-width:1920px) {
+  @include displayUHD;
 }

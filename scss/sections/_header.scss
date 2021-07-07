@@ -1,4 +1,6 @@
 @import '../utilities/assets';
+@import '../responsive/mediasQueries/respHeader';
+@import '../effects/hooverEffects';
 *{
   padding: 0;
   margin: 0;
@@ -44,7 +46,20 @@ header{
       border: none;
       width: 115px;
       height: 45px;
-     
+      &:hover{
+        cursor: pointer
+      }
     }
   } 
+}
+@include ulEffects;
+
+@media screen and (max-width:395px) {
+  @include phone; 
+}
+@media screen and (min-width : 396px) and (max-width : 768px){
+  @include tablet;
+}
+@media screen and (min-width : 768px) and (max-width : 1920px){
+  @include other;
 }

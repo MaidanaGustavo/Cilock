@@ -1,31 +1,32 @@
-@mixin responsiveFooter($wdt){
-  @if $wdt  <= 768 {
-    footer{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      .logoFooter{
-        .logo{
-          padding: 25px 0;
-        }
-      }
-      .description{
-        display: none;
-      }
-      .ulDivs{
-        display: none;
+@import '../../utilities/assets';
+@mixin tablet {
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .logoFooter{
+      .logo{
+        padding: 25px 0;
       }
     }
-  }@else if ($wdt > 768) and ($wdt< 1280){
-    footer{
-      display: flex;
-      padding: 0 25px;
+    .description{
+      display: none;
     }
-  }@else if $wdt >=1920{
-    footer{
-      padding: 5px 150px;
+    .ulDivs{
+      display: none;
     }
   }
+}
+@mixin displayHD{
+  footer{
+    display: flex;
+    padding: 0 25px;
+  }
+}
 
+@mixin displayFullHD{
+  footer{
+    padding: 5px 150px;
+  }
 }

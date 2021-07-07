@@ -1,5 +1,5 @@
-@import '../utilities/assets';
-
+@import '../responsive/mediasQueries/respFooter';
+@import '../effects/hooverEffects';
 footer{
   padding: 35px 100px;
   background-color: #0D1D45; 
@@ -31,6 +31,10 @@ footer{
      i{
        color: #fff;
        margin-right: 25px;
+       &:hover{
+         color: $ciano;
+         cursor: pointer;
+       }
      }
      i:last-child{
        margin-right: 0;
@@ -47,6 +51,7 @@ footer{
   .ulDivs{
     align-self: center;
     margin-top: 40px;
+    @include ulEffects;
     h1{
       color: #fff;
       align-self: center;
@@ -60,7 +65,16 @@ footer{
         font-size: 13pt;
       }
     }
-  }
+ }
+}
 
- 
+
+@media screen and (max-width:768px) {
+  @include tablet;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  @include displayHD;
+}
+@media screen and (min-width: 1920px) {
+  @include displayFullHD;
 }

@@ -1,61 +1,64 @@
 @import '../../utilities/assets';
 
-@mixin resposiveFirstSection($wdt){
-  @if $wdt <= 395{
-    .firstSection{
-      @include centerColumnFlex;
-      article{
-        h1{
-          font-size: 28pt;
-        }
-        button{
-          width: 150px;
-          font-size: 14pt;
-        }
-      }
-      .box{
-        display: none;
-      }
-    }
-  }@else if ($wdt >395) and ($wdt < 1280){
-    .firstSection{
-      text-align: center;
-      @include centerColumnFlex;
+@mixin phone{
+  .firstSection{
+    @include centerColumnFlex;
     article{
-      @include centerColumnFlex;
-      h4{
-        font-size: 11pt;
-      }
       h1{
         font-size: 28pt;
       }
       button{
-        width: 200px;
-        font-size: 13pt;
+        width: 150px;
+        font-size: 14pt;
       }
-      .box{
-        box-sizing: border-box;
-        width: 300px;
-        font-size: 7pt;
-        margin-top: 25px;     
-      }
-      
     }
-  }
-  }@else if $wdt > 1280{
-    .firstSection{
-      article{
-        h1{
-          font-size: 46pt;
-        }
-      }
-
-      .box{
-        box-sizing: border-box;
-        width: 450px;
-        font-size: 12pt;
-        margin-top: 25px;     
-      }
+    .box{
+      display: none;
     }
   }
 }
+
+@mixin tablet{
+  .firstSection{
+    text-align: center;
+    @include centerColumnFlex;
+  article{
+    @include centerColumnFlex;
+    h4{
+      font-size: 11pt;
+    }
+    h1{
+      font-size: 28pt;
+    }
+    button{
+      width: 200px;
+      font-size: 13pt;
+    }
+    .box{
+      box-sizing: border-box;
+      width: 300px;
+      font-size: 7pt;
+      margin-top: 25px;     
+    }
+    
+  }
+}
+}
+
+@mixin display{
+  .firstSection{
+    article{
+      h1{
+        font-size: 46pt;
+      }
+    }
+
+    .box{
+      box-sizing: border-box;
+      width: 450px;
+      font-size: 12pt;
+      margin-top: 25px;     
+    }
+  }
+}
+

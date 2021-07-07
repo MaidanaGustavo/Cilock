@@ -1,64 +1,59 @@
 @import '../../utilities/assets';
 
-@mixin responsiveHeader($wdt) {
-    *{
-      margin: 0;
-      padding: 0;
+@mixin phone {
+  header{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 0px 25px; 
+   
+    
+    div{
+      display: flex;
+      flex-direction: column;
+      padding: 25px 0;
+      span{
+        font-size: 10pt
+      };
     }
-    @if ($wdt <= 395){
-      header{
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-        padding: 0px 25px; 
-       
-        
-        div{
-          display: flex;
-          flex-direction: column;
-          padding: 25px 0;
-          span{
-            font-size: 10pt
-          };
-        }
-        ul{
-          height: 100px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          font-size: 11pt;
-          button{
-            width: 100px;
-          }
-        }
-      }
-    }@else if ($wdt >395) and ($wdt <= 768) {
-      header{
-        width: 100%;
-        @include centerColumnFlex;
-        box-sizing: border-box;
-        padding: 5px 5px;
-        ul{
-          display: flex;
-          padding: 5px 0px;
-          justify-content: center;
-          align-items: center;
-          li{
-            font-size: 11pt;
-            padding: 0 15px;
-          }
-        }
-      } 
-    }@else if $wdt >768 {
-      
-      header{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
+    ul{
+      height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 11pt;
+      button{
+        width: 100px;
       }
     }
+  }
+}
+@mixin tablet{
+  header{
+    width: 100%;
+    @include centerColumnFlex;
+    box-sizing: border-box;
+    padding: 5px 5px;
+    ul{
+      display: flex;
+      padding: 5px 0px;
+      justify-content: center;
+      align-items: center;
+      li{
+        font-size: 11pt;
+        padding: 0 15px;
+      }
+    }
+  } 
+}
+@mixin other{
+  header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
 }

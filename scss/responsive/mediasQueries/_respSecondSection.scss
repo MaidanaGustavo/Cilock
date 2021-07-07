@@ -1,77 +1,83 @@
 @import '../../utilities/assets';
-@import '../../sections/secondSection';
-@mixin resposiveSecondSection($wdt){
-  @if $wdt <=395 {
-    .secondSection{ 
-      width: 100%;
-    
-      h1{
-        display: none;
+
+@mixin phone {
+  .secondSection{ 
+    width: 100%;
+  
+    h1{
+      display: none;
+    }
+    .cards{
+      box-sizing: border-box;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .card{
+        margin: 25px 0 0 0;
+        width: 250px;
+        
+        font-size: 11pt;
+        padding: 15px 25px;
+        button{
+          width: 100px;
+          font-size: 11pt;
+          padding: 0 15px;
+        }        
       }
-      .cards{
-        box-sizing: border-box;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .card{
-          margin: 25px 0 0 0;
-          
-          
-          font-size: 12pt;
-          padding: 15px 5px;
-          button{
-            width: 100px;
-            font-size: 11pt;
-            padding: 0 15px;
-          }        
-        }
-        .card:last-child{
-          height: 275px;
-        }
+      .card:last-child{
+        height: 275px;
       }
     }
-  }@else if ($wdt >395) and  ($wdt <= 768) {
-    background-color: chocolate;
-    .secondSection{
+  }
+}
+@mixin tablet{
+  .secondSection{
+    h1{
+      font-size: 24pt;
+      text-align: center;
+    }
+        @include centerColumnFlex;
+        .cards{
+          @include centerColumnFlex;
+          .card{
+            margin: 25px 0 0 0;
+          }
+    }
+  }
+}
+
+@mixin displayHD{
+  .secondSection{
+
+    width: 100%;
+  .cards{
+    .card{
+      width: 315px;
+      height: 450px;
+      padding: 25px 35px;
       h1{
         font-size: 24pt;
-        text-align: center;
       }
-          @include centerColumnFlex;
-          .cards{
-            @include centerColumnFlex;
-            .card{
-              margin: 25px 0 0 0;
-            }
-      }
-    }
-  }@else if $wdt > 1280  {
-
-    .secondSection{
-
-      width: 100%;
-    .cards{
-      .card{
-        width: 350px;
-        height: 450px;
-        padding: 25px 20px;
-        h1{
-          font-size: 22pt;
-        }
-        .description {
-          p{
-            font-size: 14pt;
-          }
+      .description {
+        p{
+          font-size: 14pt;
         }
       }
+     
     }
-   }
+    .card:first-child{
+      button{
+        margin-top: 35px;
+      }
+    }
+  }
+ }
+}
 
-
-  }@else if ($wdt > 1600) {
-   .secondSection{
+@mixin displayUHD {
+  .secondSection{
     width: 100%;
     .cards{
       .card{
@@ -89,5 +95,4 @@
       }
     }
    }
-  }
 }

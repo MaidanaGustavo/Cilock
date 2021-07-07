@@ -1,4 +1,5 @@
 @import '../utilities/assets';
+@import '../responsive/mediasQueries/respLogos';
 .logos{
   p{
     font-size: 16pt;
@@ -15,4 +16,12 @@
       opacity: 0.5;
     }
   }
+}
+
+@media screen  and (max-width : 395px){
+  @include phone;
+}
+
+@media screen and (min-width : 395px) and (max-width : 1280px) {
+  @include tablet;  
 }

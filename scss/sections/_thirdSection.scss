@@ -1,4 +1,4 @@
-@import '../utilities/assets';
+@import '../responsive/mediasQueries/respThirdSection';
 
 .thirdSection{
   display: flex;
@@ -87,7 +87,7 @@
     padding-top: 25px;
     .card:first-child{
       width: 325px;
-      height: 200px;
+      height: 225px;
       background-color: #0D1D45;
       box-sizing: border-box;
       display: flex;
@@ -97,6 +97,8 @@
       img{
         width: 100px;
       }
+      
+      
     }
     .card:last-child{
       width: 325px;
@@ -122,4 +124,17 @@
       }
     }
   }
+}
+
+@media screen and (max-width:395px){
+  @include phone;
+}
+@media screen and (min-width : 395px) and (max-width:768px) {
+  @include tablet;
+}
+@media screen and (min-width : 768px) and (max-width:1280px) {
+  @include displayHD;
+}
+@media screen and (min-width : 1920px){
+  @include displayFullHD;
 }
