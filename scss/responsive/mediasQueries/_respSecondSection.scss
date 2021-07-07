@@ -1,0 +1,93 @@
+@import '../../utilities/assets';
+@import '../../sections/secondSection';
+@mixin resposiveSecondSection($wdt){
+  @if $wdt <=395 {
+    .secondSection{ 
+      width: 100%;
+    
+      h1{
+        display: none;
+      }
+      .cards{
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card{
+          margin: 25px 0 0 0;
+          
+          
+          font-size: 12pt;
+          padding: 15px 5px;
+          button{
+            width: 100px;
+            font-size: 11pt;
+            padding: 0 15px;
+          }        
+        }
+        .card:last-child{
+          height: 275px;
+        }
+      }
+    }
+  }@else if ($wdt >395) and  ($wdt <= 768) {
+    background-color: chocolate;
+    .secondSection{
+      h1{
+        font-size: 24pt;
+        text-align: center;
+      }
+          @include centerColumnFlex;
+          .cards{
+            @include centerColumnFlex;
+            .card{
+              margin: 25px 0 0 0;
+            }
+      }
+    }
+  }@else if $wdt > 1280  {
+
+    .secondSection{
+
+      width: 100%;
+    .cards{
+      .card{
+        width: 350px;
+        height: 450px;
+        padding: 25px 20px;
+        h1{
+          font-size: 22pt;
+        }
+        .description {
+          p{
+            font-size: 14pt;
+          }
+        }
+      }
+    }
+   }
+
+
+  }@else if ($wdt > 1600) {
+   .secondSection{
+    width: 100%;
+    .cards{
+      .card{
+        width: 375px;
+        height: 450px;
+        padding: 25px 20px;
+        h1{
+          font-size: 26pt;
+        }
+        .description {
+          p{
+            font-size: 16pt;
+          }
+        }
+      }
+    }
+   }
+  }
+}

@@ -1,0 +1,8 @@
+@import './responsive/screen';
+
+@include screenResponsive(395);
+@include screenResponsive(768);
+@include screenResponsive(1280);
+@include screenResponsive(1366);
+@include screenResponsive(1600);
+@include screenResponsive(1920);

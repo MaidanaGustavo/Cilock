@@ -1,0 +1,81 @@
+@import '../../utilities/assets';
+@mixin resposiveThirdSection($wdt){
+  .thirdSection{
+    box-sizing: border-box;
+    width: 100%;
+  }
+  @if $wdt <= 395 {
+  .thirdSection{
+
+    h1{
+      font-size: 16pt;
+    }
+    .servicesCards{
+      i{
+        display: none;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      margin-right:0;
+      .card{
+        margin-bottom: 15px;
+        width: 250px;
+      }
+      .card:last-child{
+        margin-left: 0;
+        width: 250px;
+      }
+    }
+    }
+  }@else if ($wdt  > 395) and  ($wdt<=768){
+    .thirdSection{
+      h1{
+        font-size: 24pt;
+        text-align: center;
+      }
+  
+      .servicesCards{
+        i{
+          display: none;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        margin-right:0;
+        .card{
+          margin-bottom: 15px;
+          width: 250px;
+        }
+        .card:last-child{
+          margin-left: 0;
+          width: 250px;
+        }
+      }
+    }
+  
+  }
+  @else if($wdt >= 1280 ) {
+    .thirdSection{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .servicesCards{
+        width: 100%;
+        
+      }
+    }
+  } @else if $wdt >=1920{
+    .servicesCards{
+      box-sizing: border-box;
+      #rightArrow{
+        margin-right: -185px;
+        margin-left: -185px;
+      }
+    }
+  }
+}

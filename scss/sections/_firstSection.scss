@@ -1,0 +1,68 @@
+@import '../utilities/assets';
+
+.firstSection{
+  
+  display : flex;
+  justify-content: space-between;
+  font-style: $fonteDeTexto;
+  article {
+    h4{
+      color: $ciano;
+      font-size: 14pt;
+    }
+    h1{
+      display: block;
+      color : #fff;
+      font-size: 42pt;
+      letter-spacing :1px;
+      font-weight: 800;
+    }
+    .subtitle{
+      h2{
+        color: #fff;
+        font-size: 12pt;
+        font-style: $fonteDeTexto;
+        letter-spacing: 1.2px;
+      }
+      padding: 15px 0;
+    }
+   
+    button{
+      
+      background-color: $ciano;
+      border: none;
+      border-radius: 4px;
+      width: 200px;
+      height: 50px;
+      color: $preto;
+      font-size: 18pt;
+      box-sizing: border-box;
+      margin-top: 35px;
+    }
+  }
+
+  .box{
+    background-color: $backgroundCode;
+    color: #fff;
+    border: 1px #162151 solid;
+    border-radius: 2px;
+    height: auto;
+    padding: auto;
+    width: 400px;
+    font-size: 11pt;
+    -webkit-box-shadow: 3px 2px 11px 6px #16265C; 
+    box-shadow: 3px 2px 11px 6px #16265C;
+    pre{
+      font-family: 'Roboto', sans-serif;
+      padding: 5px 15px;
+      .comment{
+        
+        opacity:0.2;
+      }
+      .number{
+        color: yellow;
+      }
+    }
+
+  }
+}
