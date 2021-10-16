@@ -6,12 +6,17 @@
   background: red;
   width: 400px;
   height: 200px;
+  gap: 35px;
   border-radius: 4px;
   padding: 45px 45px;
   background: $cardBackground;
   -webkit-box-shadow: 3px 3px 15px -12px rgba(1,2,10,0.64); 
   box-shadow: 3px 3px 15px -12px rgba(1,2,10,0.64);
 
+
+@media (max-width:1368px){
+  width: 300px;
+}
 @media (max-width:$tablet){
   width: 350px;
 }
