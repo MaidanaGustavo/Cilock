@@ -1,0 +1,90 @@
+header{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: $padding;
+	color: #fff;
+	.logo{
+		display: flex;
+		align-items: center;
+		span{
+			font-size: 14pt;
+		}
+		img{
+			margin-right: 25px;
+			width: 45px;
+		}
+	}
+
+	#menuItem{
+		display: flex;
+		align-items: center;
+		li{
+			display: inline;
+			margin-right: 25px;
+			transition: all ease 0.5s;
+		}
+
+		li:hover{
+			color: $ciano;
+			cursor: pointer;
+		}
+
+		button{
+			@include buttonStyle;
+		}
+		button:hover{
+			@include buttonStyleHover;
+		}
+		button:active{
+			@include buttonStyleActive;
+		}
+	}
+	.menuBar{
+		display: none;
+		img{
+			width: 36px;
+			
+		}
+	}	
+
+	@media(max-width: $tablet){
+		justify-content: center;
+		align-items: center;
+		.logo{
+			margin-right: 15px;
+		}
+	}
+
+	@media(max-width: $smartphone){
+		padding: $paddingMobile;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap : 10px;
+		transition: all ease 1s;
+		.logo{
+			order: 1;
+		}
+		#menuItem{
+			order: 3;
+			display: none;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 15px;
+			padding: 15px 0px;
+		}
+		#menuItem.active {
+			display: flex;
+		}
+		.menuBar{
+			order: 2;
+			display: block;
+		img{
+			cursor: pointer;	
+		}
+	}
+	}
+
+}

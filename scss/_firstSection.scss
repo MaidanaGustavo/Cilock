@@ -1,0 +1,85 @@
+.firstSection{
+  padding: $padding;
+  display : flex;
+  justify-content: space-between;
+  article{
+    h4{
+      color: $ciano;
+    }
+
+    h1{
+      font-size: 36pt;
+      color: #fff;
+    }
+      h2{
+        margin: 25px 0;
+        color: #fff;
+        font-size: 13pt;
+        max-width: 380px;
+      }
+      button{
+        @include buttonStyle;
+        width: 250px;
+        font-size: 14pt;
+        margin: 25px 0;
+      }
+      button:hover{
+        @include buttonStyleHover;
+      }
+      button:active{
+        @include buttonStyleActive;
+      }
+    
+  }
+
+  .box{
+    background-color: $backgroundCode;
+    color: #fff;
+    border: 1px #162151 solid;
+    border-radius: 2px;
+    height: auto;
+    padding: auto;
+    width: 400px;
+    font-size: 11pt;
+    -webkit-box-shadow: 3px 2px 11px 6px #16265C; 
+    box-shadow: 3px 2px 11px 6px #16265C;
+    pre{
+      padding: 5px 15px;
+      .comment{
+        
+        opacity:0.2;
+      }
+      .number{
+        color: yellow;
+      }
+    }
+    .codeBlue {
+      color: #367980;
+    }
+    
+    .codeGreen {
+      color: #00F7B9;
+    }
+  }
+
+  @media (max-width:$tablet){
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+  @media (max-width:$smartphone){
+    flex-direction: column;
+    align-items: center;
+    article{
+      h1{font-size: 24pt;}
+      button{
+        width: 200px;
+      }
+    }
+    .box{
+      width: 300px;
+      font-size: 9pt;
+    }
+  }
+}

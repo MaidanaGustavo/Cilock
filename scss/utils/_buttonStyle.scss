@@ -1,0 +1,25 @@
+@mixin buttonStyle{
+	background: $ciano;
+	border: none;
+	padding: 15px 10px;
+	border-radius: 4px;
+	font-weight: 500;
+	opacity: 0.9;
+  transition: all ease-out 0.2s;		
+
+}
+@mixin buttonStyleHover{
+	opacity: 1;
+	cursor: pointer;
+	transform: scaleY(2);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@mixin buttonStyleActive{
+	background: #00b386;
+	transition: all ease 0.5s;
+}
